@@ -1,3 +1,9 @@
+/* Font families  */
+@font-face {
+  font-family: "Fredoka-One";
+  src: url(../../assets/fonts/FredokaOne-Regular.otf),
+    url(../../assets/fonts/FredokaOne-Regular.ttf);
+}
 .connectWallet {
   padding: 20px 40px;
   font-size: 25px;
@@ -6,6 +12,7 @@
   border-radius: 40px;
   color: #fff;
   font-weight: 800;
+  font-family: "Fredoka-One";
 }
 .connectWallet:hover {
   color: #e73f2d;

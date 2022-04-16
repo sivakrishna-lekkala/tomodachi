@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "Fredoka-One";
+  src: url(../../assets/fonts/FredokaOne-Regular.otf),
+    url(../../assets/fonts/FredokaOne-Regular.ttf);
+}
+.mint {
+  margin: 12px 0px;
+  display: flex;
+  width: 194px;
+  justify-content: space-around;
+  align-items: center;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.36);
+  border-radius: 13px;
+}
+.mint-decress,
+.mint-incress {
+  width: 28px;
+  height: 28px;
+  background: rgba(179, 7, 7, 0.36);
+  border-radius: 13px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mint-decress span {
+  width: 4px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 8px;
+  transform: rotate(90deg);
+  display: inline-block;
+}
+.mint-incress {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+.mint_decress-enabled {
+  cursor: pointer;
+}
+.mint-count {
+  font-family: "Fredoka-One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -1.68px;
+  color: #3c0000;
+}
+.mint-available {
+  display: flex;
+  margin: 10px 0px;
+  align-items: center;
+  font-family: "Fredoka-One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -1.68px;
+  color: #ffffff;
+}
+.brd-right {
+  margin: 0px 15px;
+  border-right: 1px solid #fff;
+  width: 1px;
+  height: 1px;
+  padding: 15px 0px;
+}

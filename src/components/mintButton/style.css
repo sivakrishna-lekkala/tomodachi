@@ -1,0 +1,30 @@
+/* Font families  */
+@font-face {
+  font-family: "Fredoka-One";
+  src: url(../../assets/fonts/FredokaOne-Regular.otf),
+    url(../../assets/fonts/FredokaOne-Regular.ttf);
+}
+.mint-disabled {
+  background: #c0a4a4;
+  color: #595959;
+}
+.mint-active {
+  color: #ffffff;
+  background: #961c1c;
+}
+.mint-btn {
+  width: 351px;
+  height: 91px;
+  border-radius: 82px;
+  font-family: "Fredoka-One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -1.68px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 20px;
+}

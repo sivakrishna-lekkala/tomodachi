@@ -1,10 +1,9 @@
 .tomodachi {
-  background: #e73f2d;
+  background: #ec3321;
   width: 100%;
-  height: 100vh;
-}
-.tomodachi {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-flow: column;
+  min-height: 100vh;
 }

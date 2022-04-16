@@ -1,0 +1,26 @@
+/* Font families  */
+@font-face {
+  font-family: "Fredoka-One";
+  src: url(../../assets/fonts/FredokaOne-Regular.otf),
+    url(../../assets/fonts/FredokaOne-Regular.ttf);
+}
+.account-msg {
+  font-size: 27px;
+  text-transform: uppercase;
+}
+.account-msg,
+.account-name {
+  font-family: "Fredoka-One";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.account-name {
+  font-size: 20px;
+  font-size: 20px;
+  padding: 12px 40px 16px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
