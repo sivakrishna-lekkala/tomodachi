@@ -13,6 +13,7 @@
   color: #fff;
   font-weight: 800;
   font-family: "Fredoka-One";
+  cursor: pointer;
 }
 .connectWallet:hover {
   color: #e73f2d;

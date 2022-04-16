@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import ConnectButton from "../connectButton/connectButton";
 import { useConnectedMetaMask, useMetaMask } from "metamask-react";
 import { toast } from "react-toastify";
@@ -7,24 +7,34 @@ import Mint from "../mint/mint";
 import Banner from "../banner/banner";
 import PendingTransaction from "../pendingTransaction/pendingTransaction";
 import "./style.css";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 const Home = () => {
-  const { status, connect, account, chainId, ethereum } = useMetaMask();
+  const { status, connect, account } = useMetaMask();
   const [accountName, setAccountName] = useState();
+  const [mintCount, setMintCount] = useState(0);
+  const [totalMinCount, setTotalMinCount] = useState(0.0);
 
   useEffect(() => {
     let firstLetters = account ? account.substring(0, 8) : "";
     let lastFiveLetters = account ? account.substring(account.length - 7) : "";
     setAccountName(firstLetters + "......." + lastFiveLetters);
   }, [account]);
+
   const [stateStatus, setStateStatus] = useState("");
 
   useEffect(() => {
     setStateStatus(status);
   }, [status]);
 
-  const [mintCount, setMintCount] = useState(0);
-  const [totalMinCount, setTotalMinCount] = useState(0.0);
+  useEffect(() => {
+    async function listenMMAccount() {
+      window.ethereum.on("accountsChanged", async function () {
+        window.location.reload();
+      });
+    }
+    listenMMAccount();
+  }, []);
   const onMintDecress = () => {
     if (mintCount > 0) {
       setMintCount(mintCount - 1);
@@ -46,17 +56,20 @@ const Home = () => {
     setIsMint(false);
     setTimeout(() => {
       setIsLoading(false);
-    }, 30000);
+    }, 2000);
   };
 
+  if (status === "initializing") {
+    return (
+      <div className="tomodachi">
+        <PropagateLoader color="rgb(54, 215, 183)" loading={true} size={20} />
+      </div>
+    );
+  }
   return (
     <div className="tomodachi">
       {status !== "connected" ? (
-        <ConnectButton
-          status={stateStatus}
-          toast={toast}
-          connect={() => connect()}
-        />
+        <ConnectButton status={stateStatus} toast={toast} connect={connect} />
       ) : (
         <>
           <Banner />
