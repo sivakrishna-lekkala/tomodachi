@@ -31,7 +31,15 @@ const Mint = (props) => {
       <div className="mint-available">
         <div className="mint-availableCount">{mintCount} available</div>
         <div className="brd-right"></div>
-        <div className="mint-availableTotal">{totalMinCount} = total</div>
+        <div className="mint-availableTotal">
+          {totalMinCount}{" "}
+          <div>
+            <div>-</div>
+            <div>-</div>
+            <div>-</div>
+          </div>
+          total
+        </div>
       </div>
       <div>
         <MintButton

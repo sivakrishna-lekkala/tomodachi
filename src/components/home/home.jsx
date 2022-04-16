@@ -46,7 +46,7 @@ const Home = () => {
     setIsMint(false);
     setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 30000);
   };
 
   return (
