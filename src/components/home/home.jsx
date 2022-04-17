@@ -69,10 +69,13 @@ const Home = () => {
   return (
     <div className="tomodachi">
       {status !== "connected" ? (
-        <ConnectButton status={stateStatus} toast={toast} connect={connect} />
-      ) : (
         <>
           <Banner />
+          <ConnectButton status={stateStatus} toast={toast} connect={connect} />
+        </>
+      ) : (
+        <>
+          <Banner isMint={isLoading} />
           <AccountDetails account={accountName} />
           {isMint ? (
             <Mint

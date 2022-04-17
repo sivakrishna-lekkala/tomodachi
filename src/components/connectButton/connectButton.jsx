@@ -21,7 +21,7 @@ const ConnectButton = (props) => {
         connect();
       }}
     >
-      Connect Button
+      Connect Wallet
     </button>
   );
 };

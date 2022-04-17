@@ -32,13 +32,13 @@ const Mint = (props) => {
         <div className="mint-availableCount">{mintCount} available</div>
         <div className="brd-right"></div>
         <div className="mint-availableTotal">
-          {totalMinCount}{" "}
+          <span className="totalMinCount">{totalMinCount}</span>
           <div className="burger">
             <span></span>
             <span></span>
             <span></span>
           </div>
-          total
+          <span className="mint-total">total</span>
         </div>
       </div>
       <div>

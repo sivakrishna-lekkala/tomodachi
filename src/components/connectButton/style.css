@@ -11,9 +11,14 @@
   border: 4px solid #fff;
   border-radius: 40px;
   color: #fff;
-  font-weight: 800;
   font-family: "Fredoka-One";
   cursor: pointer;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 146%;
+  text-align: center;
+  letter-spacing: -1.68px;
 }
 .connectWallet:hover {
   color: #e73f2d;
